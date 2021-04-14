@@ -8,7 +8,7 @@
 
 [wachaty插件](https://github.com/wechaty/wechaty-plugin-contrib)
 
-
+[掘金Node.js结合wechaty实现个人微信机器人助手](https://juejin.cn/post/6950829527605968903/)
 
 #### 运行代码之前
 准备好可运行Wechaty的微信号,已经申请前缀为puppet_padlocal的token
