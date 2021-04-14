@@ -1,0 +1,22 @@
+{
+  "name": "wechatBot",
+  "version": "1.0.0",
+  "description": "https://github.com/brujie/wechaty-robot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/bot.js"
+  },
+  "keywords": [],
+  "author": "brujie",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "qrcode-terminal": "^0.12.0",
+    "request": "^2.88.2",
+    "urlencode": "^1.1.0",
+    "wechaty": "^0.56.6",
+    "wechaty-puppet-padlocal": "^0.2.42",
+    "xml-js": "^1.6.11"
+  }
+}

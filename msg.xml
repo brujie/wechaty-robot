@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<msg>
+    <appmsg appid="" sdkver="0">
+        <title>xiaochedddddd</title>
+        <des />
+        <action />
+        <type>33</type>
+        <showtype>0</showtype>
+        <soundtype>0</soundtype>
+        <mediatagname />
+        <messageext />
+        <messageaction />
+        <content />
+        <contentattr>0</contentattr>
+        <url>ssssssssss</url>
+        <lowurl />
+        <dataurl />
+        <lowdataurl />
+        <songalbumurl />
+        <songlyric />
+        <appattach>
+            <totallen>0</totallen>
+            <attachid />
+            <emoticonmd5 />
+            <fileext />
+            <cdnthumburl>ddddd</cdnthumburl>
+            <cdnthumbmd5>ddd</cdnthumbmd5>
+            <cdnthumblength>120085</cdnthumblength>
+            <cdnthumbwidth>720</cdnthumbwidth>
+            <cdnthumbheight>576</cdnthumbheight>
+            <cdnthumbaeskey>ddddd</cdnthumbaeskey>
+            <aeskey>dddd</aeskey>
+            <encryver>0</encryver>
+            <filekey>dddd</filekey>
+        </appattach>
+        <extinfo />
+        <sourceusername>gh_f2cb4e051ddf@app</sourceusername>
+        <sourcedisplayname>miniproName</sourcedisplayname>
+        <thumburl />
+        <md5 />
+        <statextstr />
+        <directshare>0</directshare>
+        <weappinfo>
+            <username>
+                <![CDATA[gh_f2cb4e051ddf@app]]>
+            </username>
+            <appid>
+                <![CDATA[wx0a447427eb1f2a75]]>
+            </appid>
+            <type>2</type>
+            <version>10</version>
+            <weappiconurl>
+                <![CDATA[http://mmbiz.qpic.cn/mmbiz_png/nR0iaqg5HAC5Rcsu0OEicQicUHAk6KibDWyrBmKot1ILJ3TpgTibMX4EuV6CtSgiaGknIHO5OSibxNiah2pNWZickGnexrQ/640?wx_fmt=png&wxfrom=200]]>
+            </weappiconurl>
+            <pagepath>
+                <![CDATA[pages/page/cheng_detail_xuxia/cheng_detail_xuxia.html?goodsId=10020666967060&style=jd&invtecode=8FKR7R&supplierid=]]>
+            </pagepath>
+            <shareId>
+                <![CDATA[0_wx0a447427eb1f2a75_59375d5036bdda6a2797200c8fb2db3c_1602515647_0]]>
+            </shareId>
+            <appservicetype>0</appservicetype>
+            <tradingguaranteeflag>0</tradingguaranteeflag>
+            <brandofficialflag>0</brandofficialflag>
+            <subType>0</subType>
+            <isprivatemessage>0</isprivatemessage>
+        </weappinfo>
+    </appmsg>
+    <fromusername>dddddddddd</fromusername>
+    <scene>0</scene>
+    <appinfo>
+        <version>1</version>
+        <appname></appname>
+    </appinfo>
+    <commenturl></commenturl>
+</msg>
