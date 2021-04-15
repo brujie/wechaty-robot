@@ -13,6 +13,14 @@ module.exports = (bot) => {
   return async function onMessage(msg) {
     // 判断消息来自自己，直接return
     if (msg.self()) return;
+    
+    // 判断消息是黑名单,直接return
+    if (shieldList.indexOf(msg.payload.fromId.toString()) != -1) return;
+    
+    
+    // 判断公众号消息屏蔽
+    if (msg.payload.fromId.search("gh") != -1) return;
+    
     // 消息类型判断
     switch (msg.type()) {
       case 7:
@@ -23,20 +31,18 @@ module.exports = (bot) => {
         // 回复信息是所管理的群聊名    测试成功
         if (await isRoomName(bot, msg)) return;
           // 开启机器人
-          if (msg.payload.roomId) {
             // 添加判断 不是指定群聊的信息不触发  [不加判断机器人，机器人会回复任意所在群聊内容。。。]
-            console.log("获取到群聊消息");
-            if (msg.payload.roomId === "20856899751@chatroom") {
-            // 判断群内回复内容不为文字
-              if(!reg.test(msg.text())){
-                translate(msg);
-                return;
-              } else{
+             if (msg.room()) {
+              console.log("获取到群聊消息");
+              // 全局消息测试 @机器人的消息转发到boss
+              // 获取到的所有群聊关于@自己的消息会被转发到小号
+              forwarding(bot,msg,config);
+              if (msg.payload.roomId === "17567429798@chatroom") {
+                console.log("获取到自己管理的群聊");
                 roomMessageReply(msg);
                 return;
               }
             }
-          }
         break;
       case 9:
         console.log("获取到小程序"); // 测试成功
@@ -179,4 +185,41 @@ function requestRobot(info) {
     });
   });
 }
+
+
+/**
+ * @description 回复信息是所管理的群聊名 处理函数
+ * @param {Object} bot 实例对象
+ * @param {Object} msg 消息对象
+ * @param {Object} config 配置文件
+ */
+
+async function forwarding(bot,msg,config){
+  let pointSelf =  msg.text().search(`@${config.botName}`);
+  if (pointSelf == 0) {
+    let content;
+    // 获取到@自己的内容
+    let sendText = msg.text().replace(`@${config.botName}`, "");
+    // 获取群聊名称
+    let roomName = msg.room().toString().replace("Room<","");
+    let sendName = msg.from().name();
+    content =
+      "[群聊名称]:" +
+      roomName +
+      "\n" +
+      "[发送人]:" +
+      sendName +
+      "\n" +
+      "[内容]:" +
+      sendText ;
+    // 获取转接发消息人
+    const contact =  await bot.Contact.find({ name: config.bossName });
+    // 将消息转发
+    contact.say(content);
+  } else {
+    return;
+  }
+}
+
+
 
