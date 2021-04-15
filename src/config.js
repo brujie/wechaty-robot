@@ -1,5 +1,9 @@
 module.exports = {
   // puppet_padlocal Token
+  // 机器人微信昵称
+  botName:"蔚蓝",
+  // 转发人
+  bossName: ':)',
   bossId:'rujie121411',
   token: 'puppet_padlocal_token',
   // 天行apikey
